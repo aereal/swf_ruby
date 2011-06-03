@@ -56,6 +56,7 @@ module SwfRuby
         else
           self.equal?(other)
         end
+      end
     end
   end
 end
