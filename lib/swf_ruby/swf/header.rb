@@ -46,13 +46,13 @@ module SwfRuby
 
       def ==(other)
         if other.kind_of? self.class
-           self.compressed  == other.compressed  and
-           self.version     == other.version     and
-           self.file_length == other.file_length and
-           self.frame_size  == other.frame_size  and
-           self.frame_rate  == other.frame_rate  and
-           self.frame_count == other.frame_count and
-           self.length      == other.length
+          self.compressed  == other.compressed  and
+          self.version     == other.version     and
+          self.file_length == other.file_length and
+          self.frame_size  == other.frame_size  and
+          self.frame_rate  == other.frame_rate  and
+          self.frame_count == other.frame_count and
+          self.length      == other.length
         else
           self.equal?(other)
         end
