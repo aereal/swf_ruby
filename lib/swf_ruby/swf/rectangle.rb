@@ -19,6 +19,19 @@ module SwfRuby
         @ymax = rect_bitstr[5+3*self.bits, self.bits].to_i(2)
         @length = (5+self.bits*4)/8+1 # including padded byte
       end
+
+      def ==(other)
+        if other.kind_of? self.class
+          self.bits   == other.bits and
+          self.xmin   == other.xmin and
+          self.xmax   == other.xmax and
+          self.ymin   == other.ymin and
+          self.ymax   == other.ymax and
+          self.length == other.length
+        else
+          self.equal?(other)
+        end
+      end
     end
   end
 end
